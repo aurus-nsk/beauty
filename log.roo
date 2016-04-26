@@ -1,0 +1,13 @@
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-04-25 10:48:10
+hint
+hint
+project --topLevelPackage com.beauty --projectName beauty --java 7 --packaging WAR
+jpa setup --database MYSQL --provider HIBERNATE
+// [failed] entity jpa --class com.beauty.domain.Order
+entity jpa --class com.beauty.domain.BeautyOrder
+hint
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-04-25 11:14:13
+hint
+controller scaffold --class com.beauty.web.BeautyOrderController --entity ~.domain.BeautyOrder
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-04-25 11:43:48
