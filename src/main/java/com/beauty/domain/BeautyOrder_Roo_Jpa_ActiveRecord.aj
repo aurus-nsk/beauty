@@ -14,7 +14,7 @@ privileged aspect BeautyOrder_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager BeautyOrder.entityManager;
     
-    public static final List<String> BeautyOrder.fieldNames4OrderClauseFilter = java.util.Arrays.asList("");
+    public static final List<String> BeautyOrder.fieldNames4OrderClauseFilter = java.util.Arrays.asList("shopName", "productName", "colour", "sizeName", "quantity", "priceOrigin", "priceSaleOrg", "taxDollars", "deliveryUSA", "totalDollars", "totalRubles", "weight", "deliveryRussiaDollars", "deliveryRussiaRubles", "currency", "totalSumDollars", "totalSumRubles");
     
     public static final EntityManager BeautyOrder.entityManager() {
         EntityManager em = new BeautyOrder().entityManager;

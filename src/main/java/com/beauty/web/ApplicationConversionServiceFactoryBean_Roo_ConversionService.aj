@@ -16,7 +16,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<BeautyOrder, String> ApplicationConversionServiceFactoryBean.getBeautyOrderToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.beauty.domain.BeautyOrder, java.lang.String>() {
             public String convert(BeautyOrder beautyOrder) {
-                return "(no displayable fields)";
+                return new StringBuilder().append(beautyOrder.getShopName()).append(' ').append(beautyOrder.getProductName()).append(' ').append(beautyOrder.getColour()).append(' ').append(beautyOrder.getSizeName()).toString();
             }
         };
     }

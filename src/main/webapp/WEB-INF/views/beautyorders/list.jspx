@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_beauty_domain_BeautyOrder" items="${beautyorders}" z="bxjPDW9g9zeIVCFrEBNXppWjmbg=">
+        <table:table data="${beautyorders}" id="l_com_beauty_domain_BeautyOrder" path="/beautyorders" z="8k9rYk7hWsiqP+RpqNjmB1Vj18Y=">
+            <table:column id="c_com_beauty_domain_BeautyOrder_shopName" property="shopName" z="ru9oN6p9wIyxMVN26CLG5Cj5jhA="/>
+            <table:column id="c_com_beauty_domain_BeautyOrder_productName" property="productName" z="aFbORdJRdTAcugdIBvSlsj1n/QE="/>
+            <table:column id="c_com_beauty_domain_BeautyOrder_colour" property="colour" z="znhzK5VzD4HTYSEON/0N8/EJWdA="/>
+            <table:column id="c_com_beauty_domain_BeautyOrder_sizeName" property="sizeName" z="ppXxP6F/m/NmEoN8MasT7Nmqx3s="/>
+            <table:column id="c_com_beauty_domain_BeautyOrder_quantity" property="quantity" z="gGoiOSYTc9Yg7ACL/2SCtEq/8Hk="/>
+            <table:column id="c_com_beauty_domain_BeautyOrder_priceOrigin" property="priceOrigin" z="DoDcb5t3gH9XeUPs9ckjsPnRiJw="/>
+        </table:table>
+    </page:list>
+</div>

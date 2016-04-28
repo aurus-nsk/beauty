@@ -15,3 +15,26 @@ exit
 hint
 security setup
 perform eclipse
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-04-28 12:44:36
+hint
+// [failed] entity jpa --class ~.domain.BeautyOrder
+field string --fieldName shopName --class ~.domain.BeautyOrder
+field string --fieldName productName --notNull --sizeMin 2 --class ~.domain.BeautyOrder
+field string --fieldName colour --class ~.domain.BeautyOrder
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-04-28 13:09:45
+// [failed] field string --fieldName size --class ~.domain.BeautyOrder
+field string --fieldName sizeName --class ~.domain.BeautyOrder
+field string --fieldName quantity --class ~.domain.BeautyOrder --notNull 
+field number --fieldName priceOrigin --type java.math.BigDecimal --notNull 
+field number --fieldName priceSaleOrg --notNull --type java.math.BigDecimal
+field number --type java.math.BigDecimal --notNull --fieldName taxDollars
+field number --type java.math.BigDecimal --fieldName deliveryUSA
+field number --type java.math.BigDecimal --fieldName totalDollars --notNull 
+field number --type java.math.BigDecimal --fieldName totalRubles --notNull
+field number --fieldName weight --notNull --type java.lang.Integer
+field number --type java.math.BigDecimal --fieldName deliveryRussiaDollars --notNull 
+field number --type java.math.BigDecimal --fieldName deliveryRussiaRubles --notNull
+// [failed] field number --type java.math.BigDecimal --fieldName totalDollars --notNull 
+field number --type java.math.BigDecimal --fieldName currency --notNull 
+field number --type java.math.BigDecimal --fieldName totalSumDollars --notNull 
+field number --type java.math.BigDecimal --fieldName totalSumRubles --notNull

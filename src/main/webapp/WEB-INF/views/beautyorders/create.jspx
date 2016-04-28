@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_beauty_domain_BeautyOrder" modelAttribute="beautyOrder" path="/beautyorders" render="${empty dependencies}" z="RjmCSzKcVOW3FGbuNM9JB0l/FTM=">
+        <field:input field="shopName" id="c_com_beauty_domain_BeautyOrder_shopName" z="KNbnn8zIg18nXIWGkIb3xlp0WNg="/>
+        <field:input field="productName" id="c_com_beauty_domain_BeautyOrder_productName" min="2" required="true" z="S4w8PHqI3+LcMomrgr2iHbNCixs="/>
+        <field:input field="colour" id="c_com_beauty_domain_BeautyOrder_colour" z="9DSVMFM0CL2Q7ZofjRgKCf04vfg="/>
+        <field:input field="sizeName" id="c_com_beauty_domain_BeautyOrder_sizeName" z="zwEj3NcpT9569D3hDs8UnwhO5OY="/>
+        <field:input field="quantity" id="c_com_beauty_domain_BeautyOrder_quantity" required="true" z="auwV2OV0/gggya/umHWU1XbgtjU="/>
+        <field:input field="priceOrigin" id="c_com_beauty_domain_BeautyOrder_priceOrigin" required="true" validationMessageCode="field_invalid_number" z="Dgt2+hLAZHMO8zeg31/b6tYVt9Q="/>
+        <field:input field="priceSaleOrg" id="c_com_beauty_domain_BeautyOrder_priceSaleOrg" required="true" validationMessageCode="field_invalid_number" z="kp6/d7asqMvrC+qwJbEPQU1Ggwc="/>
+        <field:input field="taxDollars" id="c_com_beauty_domain_BeautyOrder_taxDollars" required="true" validationMessageCode="field_invalid_number" z="Sive8bRhMSr3j/5p7TLqFJOaw34="/>
+        <field:input field="deliveryUSA" id="c_com_beauty_domain_BeautyOrder_deliveryUSA" validationMessageCode="field_invalid_number" z="kNlDhU6pazGUv61cwuifC/oNoMQ="/>
+        <field:input field="totalDollars" id="c_com_beauty_domain_BeautyOrder_totalDollars" required="true" validationMessageCode="field_invalid_number" z="HPKQHfr2uUOTlc/cdO3DXQ8p+UY="/>
+        <field:input field="totalRubles" id="c_com_beauty_domain_BeautyOrder_totalRubles" required="true" validationMessageCode="field_invalid_number" z="zeiJf5Ydu3u2fS6JyxFiwNVfguU="/>
+        <field:input field="weight" id="c_com_beauty_domain_BeautyOrder_weight" required="true" validationMessageCode="field_invalid_integer" z="5GtiMfhY7kWVz8QcnpDVilzuCOY="/>
+        <field:input field="deliveryRussiaDollars" id="c_com_beauty_domain_BeautyOrder_deliveryRussiaDollars" required="true" validationMessageCode="field_invalid_number" z="FZv1et6J3Iwz7Ne+s2jSrY2k5fU="/>
+        <field:input field="deliveryRussiaRubles" id="c_com_beauty_domain_BeautyOrder_deliveryRussiaRubles" required="true" validationMessageCode="field_invalid_number" z="U6ZX9RPxMdnEuI3AcCI9tt66B0c="/>
+        <field:input field="currency" id="c_com_beauty_domain_BeautyOrder_currency" required="true" validationMessageCode="field_invalid_number" z="4jJPdJAkbcFhnlJWwYfZHg4w+SQ="/>
+        <field:input field="totalSumDollars" id="c_com_beauty_domain_BeautyOrder_totalSumDollars" required="true" validationMessageCode="field_invalid_number" z="RuzA0jRQMITgx3i6eyZoUQvx8QE="/>
+        <field:input field="totalSumRubles" id="c_com_beauty_domain_BeautyOrder_totalSumRubles" required="true" validationMessageCode="field_invalid_number" z="+ahdgAG8C+BNFglTEufQ1T8POpc="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_beauty_domain_BeautyOrder" render="${not empty dependencies}" z="9BWMe8n20c2n4wLKEuFDxl7s6Wg="/>
+</div>
