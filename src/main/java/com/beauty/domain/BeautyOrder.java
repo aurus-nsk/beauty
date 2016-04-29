@@ -5,12 +5,18 @@ import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
+import javax.persistence.OneToOne;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
 public class BeautyOrder {
 
+	/**
+     */
+    @OneToOne
+    private Person person;
+	
     /**
      */
     private String shopName;

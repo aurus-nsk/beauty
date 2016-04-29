@@ -4,9 +4,18 @@
 package com.beauty.domain;
 
 import com.beauty.domain.BeautyOrder;
+import com.beauty.domain.Person;
 import java.math.BigDecimal;
 
 privileged aspect BeautyOrder_Roo_JavaBean {
+    
+    public Person BeautyOrder.getPerson() {
+        return this.person;
+    }
+    
+    public void BeautyOrder.setPerson(Person person) {
+        this.person = person;
+    }
     
     public String BeautyOrder.getShopName() {
         return this.shopName;

@@ -9,7 +9,7 @@
             <table:column id="c_com_beauty_domain_BeautyOrder_colour" property="colour" z="znhzK5VzD4HTYSEON/0N8/EJWdA="/>
             <table:column id="c_com_beauty_domain_BeautyOrder_sizeName" property="sizeName" z="ppXxP6F/m/NmEoN8MasT7Nmqx3s="/>
             <table:column id="c_com_beauty_domain_BeautyOrder_quantity" property="quantity" z="gGoiOSYTc9Yg7ACL/2SCtEq/8Hk="/>
-            <table:column id="c_com_beauty_domain_BeautyOrder_priceOrigin" property="priceOrigin" z="DoDcb5t3gH9XeUPs9ckjsPnRiJw="/>
+            <table:column id="c_com_beauty_domain_BeautyOrder_person" property="person" z="BT88DvF3EgX+crT49xAkInJLAvk="/>
         </table:table>
     </page:list>
 </div>

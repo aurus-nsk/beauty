@@ -4,6 +4,7 @@
 package com.beauty.web;
 
 import com.beauty.domain.BeautyOrder;
+import com.beauty.domain.Person;
 import com.beauty.web.BeautyOrderController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -86,6 +87,7 @@ privileged aspect BeautyOrderController_Roo_Controller {
     
     void BeautyOrderController.populateEditForm(Model uiModel, BeautyOrder beautyOrder) {
         uiModel.addAttribute("beautyOrder", beautyOrder);
+        uiModel.addAttribute("people", Person.findAllPeople());
     }
     
     String BeautyOrderController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
