@@ -4,6 +4,7 @@
 package com.beauty.web;
 
 import com.beauty.domain.BeautyOrder;
+import com.beauty.domain.Person;
 import com.beauty.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -37,10 +38,37 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Person, String> ApplicationConversionServiceFactoryBean.getPersonToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.beauty.domain.Person, java.lang.String>() {
+            public String convert(Person person) {
+                return new StringBuilder().append(person.getName()).append(' ').append(person.getMiddleName()).append(' ').append(person.getSurname()).append(' ').append(person.getUsername()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Person> ApplicationConversionServiceFactoryBean.getIdToPersonConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.beauty.domain.Person>() {
+            public com.beauty.domain.Person convert(java.lang.Long id) {
+                return Person.findPerson(id);
+            }
+        };
+    }
+    
+    public Converter<String, Person> ApplicationConversionServiceFactoryBean.getStringToPersonConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.beauty.domain.Person>() {
+            public com.beauty.domain.Person convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Person.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getBeautyOrderToStringConverter());
         registry.addConverter(getIdToBeautyOrderConverter());
         registry.addConverter(getStringToBeautyOrderConverter());
+        registry.addConverter(getPersonToStringConverter());
+        registry.addConverter(getIdToPersonConverter());
+        registry.addConverter(getStringToPersonConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
