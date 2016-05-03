@@ -46,3 +46,25 @@ exit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-04-29 12:13:10
 focus --class ~.domain.BeautyOrder
 field reference --fieldName person --type ~.domain.Person --cardinality ONE_TO_ONE 
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2016-05-02 14:09:22
+perform eclipse
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2016-05-02 14:36:28
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2016-05-02 15:06:04
+focus --class ~.domain.Person 
+field string --fieldName name
+field string --fieldName middleName
+field string --fieldName surname
+web mvc all --package ~.web
+focus --class ~.domain.Person 
+field string --fieldName username --notNull
+field string --fieldName password --notNull
+field boolean --fieldName accountNonExpired
+field boolean --fieldName accountNonLocked
+field boolean --fieldName credentialsNonExpired
+field boolean --fieldName enabled
+finder add --finderName findPersonByUsernameAndPassword --class ~.domain.Person
+finder list
+finder add --finderName findPeopleByUsernameAndPasswordEquals --class ~.domain.Person
+// [failed] field string --fieldName role
+field string --fieldName authorityRole
+perform eclipse
