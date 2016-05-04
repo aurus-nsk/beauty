@@ -6,15 +6,16 @@
 	<jsp:directive.page pageEncoding="UTF-8" /> 
 			
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=8" />	
-			
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+		<meta http-equiv="X-UA-Compatible" content="IE=8" ></meta>	
+		<meta http-equiv="x-ua-compatible" content="ie=edge"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>	
 		<util:load-scripts />
 		
 		<spring:message code="application_name" var="app_name" htmlEscape="false"/>
 		<title><spring:message code="welcome_h3" arguments="${app_name}" /></title>
 	</head>
-	
+	<!-- 
   	<body class="tundra spring">
    		<div id="wrapper">
 		    <tiles:insertAttribute name="header" ignore="true" />
@@ -24,5 +25,14 @@
 		    	<tiles:insertAttribute name="footer" ignore="true"/>
 		    </div>
 		</div>
+	</body>
+	-->
+	<body>
+		<tiles:insertAttribute name="header" ignore="true" />
+		<tiles:insertAttribute name="menu" ignore="true" /> 
+		<br></br>
+		<tiles:insertAttribute name="body" />
+		<br></br>
+		<tiles:insertAttribute name="footer" ignore="true" />
 	</body>
 </html>
