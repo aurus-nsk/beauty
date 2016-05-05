@@ -9,12 +9,18 @@
   <spring:url value="/resources/spring/Spring.js" var="spring_url" />
   <spring:url value="/resources/spring/Spring-Dojo.js" var="spring_dojo_url" />
   <spring:url value="/resources/images/favicon.ico" var="favicon" />
+  
+  <spring:url value="/resources/bower_components/bootstrap/dist/css/bootstrap.css" var="bootstrap_css" />
+  <spring:url value="/resources/bower_components/jquery/dist/jquery.js" var="jquery_js" />
+  <spring:url value="/resources/bower_components/bootstrap/dist/js/bootstrap.js" var="bootstrap_js" />
+  <spring:url value="/resources/js/beauty.js" var="beauty_js" />
+  
   <!-- 
   <link rel="stylesheet" type="text/css" href="${tundra_url}" />
   <link rel="stylesheet" type="text/css" media="screen" href="${roo_css_url}" />
   <link rel="SHORTCUT ICON" href="${favicon}" />
   -->
-	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="${bootstrap_css}" />
   
   <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
   <c:set var="userLocale">
@@ -23,8 +29,8 @@
   </c:set>
 	
 	<!-- jQuery first, then Bootstrap JS. -->
-	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"><!-- jQuery --></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"><!-- language --></script>
+	<script src="${jquery_js}" type="text/javascript"><!-- jQuery --></script>
+	<script src="${bootstrap_js}" type="text/javascript"><!-- language --></script>
 	
   <script type="text/javascript">var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};</script>
 
@@ -32,5 +38,5 @@
   <script src="${spring_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
   <script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script language="JavaScript" type="text/javascript">dojo.require("dojo.parser");</script>
-	<script src="js/beauty.js" type="text/javascript"><!-- application js --></script>
+	<script src="" type="text/javascript"><!-- application js --></script>
 </jsp:root>
