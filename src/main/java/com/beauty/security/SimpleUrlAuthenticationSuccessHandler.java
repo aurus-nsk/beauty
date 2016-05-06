@@ -55,7 +55,7 @@ public class SimpleUrlAuthenticationSuccessHandler implements AuthenticationSucc
         }
  
         if (isUser) {
-            return "/orders/index";
+            return "/beautyorders";
         } else if (isAdmin) {
             return "/";
         } else {

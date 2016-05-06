@@ -12,8 +12,8 @@
         	login-processing-url="/resources/j_spring_security_check" 
         	login-page="/login" 
         	authentication-failure-url="/login?login_error=t"
-        	authentication-success-handler-ref="authenticationSuccessHandler"/>
-        	
+        	authentication-success-handler-ref="authenticationSuccessHandler" />
+        	 
         <logout logout-url="/resources/j_spring_security_logout" />
         <!-- Configure these elements to secure URIs in your application -->
         <intercept-url pattern="/choices/**" access="hasRole('ROLE_ADMIN')" />
@@ -25,6 +25,7 @@
 
     <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
     <!-- Configure Authentication mechanism -->
+    <!-- Настройте механизм аутентификации 
     <authentication-manager alias="authenticationManager">
         <authentication-provider>
             <password-encoder hash="sha-256" />
@@ -34,12 +35,10 @@
             </user-service>
         </authentication-provider>
     </authentication-manager>
+    -->
     
-    
-	
-    <!-- Настройте механизм аутентификации 
 	<authentication-manager alias="authenticationManager">
 		<authentication-provider ref="beautyAuthenticationProvider"/>
 	</authentication-manager>
-	-->
+	
 </beans:beans>
