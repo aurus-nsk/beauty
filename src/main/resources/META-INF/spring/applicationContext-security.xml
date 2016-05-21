@@ -26,6 +26,7 @@
     <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
     <!-- Configure Authentication mechanism -->
     
+     <!-- Настройте механизм аутентификации 
     <authentication-manager alias="authenticationManager">
         <authentication-provider>
             <password-encoder hash="sha-256" />
@@ -35,10 +36,10 @@
             </user-service>
         </authentication-provider>
     </authentication-manager>
-    
-    <!-- Настройте механизм аутентификации 
+    -->
+   
 	<authentication-manager alias="authenticationManager">
 		<authentication-provider ref="beautyAuthenticationProvider"/>
 	</authentication-manager>
-	-->
+	
 </beans:beans>

@@ -21,5 +21,8 @@
         <field:display field="totalSumDollars" id="s_com_beauty_domain_BeautyOrder_totalSumDollars" object="${beautyorder}" z="mlfycjJ1sgTOM+zKx7blu2dAdNc="/>
         <field:display field="totalSumRubles" id="s_com_beauty_domain_BeautyOrder_totalSumRubles" object="${beautyorder}" z="GPXEiOT3nsoweT13XyKG9igkFdk="/>
         <field:display field="person" id="s_com_beauty_domain_BeautyOrder_person" object="${beautyorder}" z="yj9tLpsgmYbn87BHwMV7Iu4VvYc="/>
+        <field:display field="currencyDelivery" id="s_com_beauty_domain_BeautyOrder_currencyDelivery" object="${beautyorder}" z="BmZoF5hVIRaJZ0vCJoJorJMVrrU="/>
+        <field:display field="priceOfKg" id="s_com_beauty_domain_BeautyOrder_priceOfKg" object="${beautyorder}" z="BhtG/Y3je8r8GDUbl9aykdeeeCs="/>
+        <field:display date="true" dateTimePattern="${beautyOrder_datecreate_date_format}" field="dateCreate" id="s_com_beauty_domain_BeautyOrder_dateCreate" object="${beautyorder}" z="GRqFmTg/Pi1Bkkv2/+QWGTOjUgQ="/>
     </page:show>
 </div>

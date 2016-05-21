@@ -21,5 +21,11 @@
         <field:input field="totalSumDollars" id="c_com_beauty_domain_BeautyOrder_totalSumDollars" required="true" validationMessageCode="field_invalid_number" z="RuzA0jRQMITgx3i6eyZoUQvx8QE="/>
         <field:input field="totalSumRubles" id="c_com_beauty_domain_BeautyOrder_totalSumRubles" required="true" validationMessageCode="field_invalid_number" z="+ahdgAG8C+BNFglTEufQ1T8POpc="/>
         <field:select field="person" id="c_com_beauty_domain_BeautyOrder_person" itemValue="id" items="${people}" path="/people" z="4BURQS2xbFlwSLUG5ejviX19M3U="/>
+        <field:input field="currencyDelivery" id="c_com_beauty_domain_BeautyOrder_currencyDelivery" required="true" validationMessageCode="field_invalid_number" z="SoNwcB3CHOGiTAvLKK6PnHSQgEo="/>
+        <field:input field="priceOfKg" id="c_com_beauty_domain_BeautyOrder_priceOfKg" required="true" validationMessageCode="field_invalid_number" z="oEDELhSD+YyKRVIaTgAwxXNhLXk="/>
+        <field:datetime dateTimePattern="${beautyOrder_datecreate_date_format}" field="dateCreate" id="c_com_beauty_domain_BeautyOrder_dateCreate" z="pVUiyUt/TwrRsVCVQI1ve93VdUM="/>
     </form:update>
+    <SCRIPT type="text/javascript">
+    	loadFields();
+    </SCRIPT>
 </div>

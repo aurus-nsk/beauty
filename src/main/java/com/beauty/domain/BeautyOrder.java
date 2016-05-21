@@ -6,17 +6,21 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import javax.persistence.OneToOne;
+import java.util.Date;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
 public class BeautyOrder {
 
-	/**
+    /**
      */
     @OneToOne
     private Person person;
-	
+
     /**
      */
     private String shopName;
@@ -85,9 +89,16 @@ public class BeautyOrder {
     private BigDecimal deliveryRussiaRubles;
 
     /**
+     * currencyPurchase
      */
     @NotNull
     private BigDecimal currency;
+
+    /**
+     * currencyDelivery
+     */
+    @NotNull
+    private BigDecimal currencyDelivery;
 
     /**
      */
@@ -98,4 +109,15 @@ public class BeautyOrder {
      */
     @NotNull
     private BigDecimal totalSumRubles;
+
+    /**
+     */
+    @NotNull
+    private BigDecimal priceOfKg;
+
+    /**
+     */
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Date dateCreate;
 }

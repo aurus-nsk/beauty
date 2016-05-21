@@ -68,3 +68,13 @@ finder add --finderName findPeopleByUsernameAndPasswordEquals --class ~.domain.P
 // [failed] field string --fieldName role
 field string --fieldName authorityRole
 perform eclipse
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2016-05-14 12:00:48
+focus --class ~.domain.BeautyOrder
+focus --class ~.domain.BeautyOrder
+focus --class ~.domain.BeautyOrder
+field number --type java.math.BigDecimal --fieldName currencyDelivery --notNull
+field number --type java.math.BigDecimal --fieldName priceOfKg --notNull
+field date --fieldName dateCreate --type java.util.Date --persistenceType JPA_TIMESTAMP
+focus --class ~.domain.Person
+field date --fieldName dateCreate --type java.util.Date --persistenceType JPA_TIMESTAMP
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2016-05-14 14:04:27

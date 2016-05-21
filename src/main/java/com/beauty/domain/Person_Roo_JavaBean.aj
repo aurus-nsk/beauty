@@ -4,6 +4,7 @@
 package com.beauty.domain;
 
 import com.beauty.domain.Person;
+import java.util.Date;
 
 privileged aspect Person_Roo_JavaBean {
     
@@ -45,6 +46,14 @@ privileged aspect Person_Roo_JavaBean {
     
     public void Person.setPassword(String password) {
         this.password = password;
+    }
+    
+    public Date Person.getDateCreate() {
+        return this.dateCreate;
+    }
+    
+    public void Person.setDateCreate(Date dateCreate) {
+        this.dateCreate = dateCreate;
     }
     
 }

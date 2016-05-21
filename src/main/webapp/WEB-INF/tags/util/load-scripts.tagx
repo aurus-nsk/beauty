@@ -39,5 +39,5 @@
   <script src="${spring_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
   <script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script language="JavaScript" type="text/javascript">dojo.require("dojo.parser");</script>
-	<script src="" type="text/javascript"><!-- application js --></script>
+	<script src="${beauty_js}" type="text/javascript"><!-- application js --></script>
 </jsp:root>

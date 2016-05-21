@@ -8,6 +8,8 @@ import com.beauty.web.PersonController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +40,7 @@ privileged aspect PersonController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String PersonController.show(@PathVariable("id") Long id, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("person", Person.findPerson(id));
         uiModel.addAttribute("itemId", id);
         return "people/show";
@@ -54,6 +57,7 @@ privileged aspect PersonController_Roo_Controller {
         } else {
             uiModel.addAttribute("people", Person.findAllPeople());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "people/list";
     }
     
@@ -84,8 +88,13 @@ privileged aspect PersonController_Roo_Controller {
         return "redirect:/people";
     }
     
+    void PersonController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("person_datecreate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+    }
+    
     void PersonController.populateEditForm(Model uiModel, Person person) {
         uiModel.addAttribute("person", person);
+        addDateTimeFormatPatterns(uiModel);
     }
     
     String PersonController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

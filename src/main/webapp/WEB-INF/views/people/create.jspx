@@ -8,6 +8,7 @@
         <field:input field="surname" id="c_com_beauty_domain_Person_surname" z="0yh6jw4UPljiqoIIkZEkMZ4mDEo="/>
         <field:input field="username" id="c_com_beauty_domain_Person_username" required="true" z="2U6Cz+lLKM8kmpRZHH9cRBtfPLk="/>
         <field:input field="password" id="c_com_beauty_domain_Person_password" required="true" z="I3NNh+LcDU1fqTbp9JXgOdVUXq8="/>
+        <field:datetime dateTimePattern="${person_datecreate_date_format}" field="dateCreate" id="c_com_beauty_domain_Person_dateCreate" z="HJcMtADcee4Oh7puRx8bG0HcI2U="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_beauty_domain_Person" render="${not empty dependencies}" z="iBbTqZiFIxYR284asWFsPkJ9VX0="/>
 </div>

@@ -9,6 +9,7 @@
             <table:column id="c_com_beauty_domain_Person_surname" property="surname" z="Ph8JMAvg6+ibAfLllM5zKzKSuxY="/>
             <table:column id="c_com_beauty_domain_Person_username" property="username" z="d1FX6S/l3B3cUGMlqHL/jj3KFXE="/>
             <table:column id="c_com_beauty_domain_Person_password" property="password" z="2dCaUo2JyNSzP/y9SAbd+RIbU24="/>
+            <table:column date="true" dateTimePattern="${person_datecreate_date_format}" id="c_com_beauty_domain_Person_dateCreate" property="dateCreate" z="BKlZ5I4BTN2FfnRKvNAN7KYYoX4="/>
         </table:table>
     </page:list>
 </div>

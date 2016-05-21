@@ -6,6 +6,7 @@ package com.beauty.domain;
 import com.beauty.domain.BeautyOrder;
 import com.beauty.domain.Person;
 import java.math.BigDecimal;
+import java.util.Date;
 
 privileged aspect BeautyOrder_Roo_JavaBean {
     
@@ -137,6 +138,14 @@ privileged aspect BeautyOrder_Roo_JavaBean {
         this.currency = currency;
     }
     
+    public BigDecimal BeautyOrder.getCurrencyDelivery() {
+        return this.currencyDelivery;
+    }
+    
+    public void BeautyOrder.setCurrencyDelivery(BigDecimal currencyDelivery) {
+        this.currencyDelivery = currencyDelivery;
+    }
+    
     public BigDecimal BeautyOrder.getTotalSumDollars() {
         return this.totalSumDollars;
     }
@@ -151,6 +160,22 @@ privileged aspect BeautyOrder_Roo_JavaBean {
     
     public void BeautyOrder.setTotalSumRubles(BigDecimal totalSumRubles) {
         this.totalSumRubles = totalSumRubles;
+    }
+    
+    public BigDecimal BeautyOrder.getPriceOfKg() {
+        return this.priceOfKg;
+    }
+    
+    public void BeautyOrder.setPriceOfKg(BigDecimal priceOfKg) {
+        this.priceOfKg = priceOfKg;
+    }
+    
+    public Date BeautyOrder.getDateCreate() {
+        return this.dateCreate;
+    }
+    
+    public void BeautyOrder.setDateCreate(Date dateCreate) {
+        this.dateCreate = dateCreate;
     }
     
 }

@@ -8,5 +8,6 @@
         <field:display field="surname" id="s_com_beauty_domain_Person_surname" object="${person}" z="eO7lk7yrS5IGVYVA4gEhd681VP8="/>
         <field:display field="username" id="s_com_beauty_domain_Person_username" object="${person}" z="a+kGm8mFtKsjaO1U1alqYuRkN0E="/>
         <field:display field="password" id="s_com_beauty_domain_Person_password" object="${person}" z="RgYkO+xcdtYQhFo3F7zCbmlNyOU="/>
+        <field:display date="true" dateTimePattern="${person_datecreate_date_format}" field="dateCreate" id="s_com_beauty_domain_Person_dateCreate" object="${person}" z="k4Y2Xu1cokypUurdBYxrBJRLaOo="/>
     </page:show>
 </div>
