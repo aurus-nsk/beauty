@@ -1,4 +1,6 @@
-<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:spring="http://www.springframework.org/tags" xmlns:form="http://www.springframework.org/tags/form" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:spring="http://www.springframework.org/tags" xmlns:form="http://www.springframework.org/tags/form" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" 
+xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+xmlns:sec="http://www.springframework.org/security/tags">
   <jsp:directive.tag import="java.util.ArrayList" />
   <jsp:output omit-xml-declaration="yes" />
 
@@ -23,15 +25,20 @@
     
     <jsp:doBody />
 
+	<c:set var="admin" value="flase" />
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+		<c:set var="admin" value="true" />
+	</sec:authorize>
+
     <c:if test="${empty typeIdFieldName}">
       <c:set var="typeIdFieldName" value="id" />
     </c:if>
 
-    <c:if test="${empty update}">
+    <c:if test="${empty update and admin}">
       <c:set var="update" value="true" />
     </c:if>
 
-    <c:if test="${empty delete}">
+    <c:if test="${empty delete and admin}">
       <c:set var="delete" value="true" />
     </c:if>
 
@@ -177,7 +184,7 @@
       </c:forEach>
       <tr class="footer">
         <td colspan="${colCounter}">
-          <c:if test="${empty create or create}">
+          <c:if test="${(empty create or create) and admin}">
             <span class="new">
               <spring:url value="${path}" var="create_url">
                 <spring:param name="form" />

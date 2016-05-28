@@ -20,8 +20,11 @@
         <intercept-url pattern="/member/**" access="isAuthenticated()" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/login/**" access="permitAll" />
+        <intercept-url pattern="/beauty/people/initDB" access="permitAll" />
+        <intercept-url pattern="/people/initDB" access="permitAll" />
         <intercept-url pattern="/**" access="isAuthenticated()" />
     </http>
+    
 
     <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
     <!-- Configure Authentication mechanism -->
