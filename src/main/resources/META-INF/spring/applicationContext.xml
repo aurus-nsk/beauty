@@ -43,21 +43,18 @@
         The most commonly used annotation is @Autowired, which instructs Spring to
         dependency inject an object into your class.
     -->
-    <context:component-scan base-package="com.beauty">
-        <context:exclude-filter expression=".*_Roo_.*" type="regex"/>
-        <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
-    </context:component-scan>
+    
     <bean 	name="beautyAuthenticationProvider" 
     		class="com.beauty.security.BeautyAuthenticationProvider">
 	</bean>
 	<bean 	id="authenticationSuccessHandler"
         	class="com.beauty.security.SimpleUrlAuthenticationSuccessHandler" />
         
-    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
+    <bean lazy-init="true" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
         <property name="driverClassName" value="${database.driverClassName}"/>
-        <property name="url" value="${database.url}"/>
-        <property name="username" value="${database.username}"/>
-        <property name="password" value="${database.password}"/>
+        <property name="url" value="jdbc:mysql://#{systemEnvironment['OPENSHIFT_MYSQL_DB_HOST']}:#{systemEnvironment['OPENSHIFT_MYSQL_DB_PORT']}/nsk?characterEncoding=UTF-8"/>
+        <property name="username" value="adminhJCkKRl"/>
+        <property name="password" value="iSXeePtHYxfg"/>
         <property name="testOnBorrow" value="true"/>
         <property name="testOnReturn" value="true"/>
         <property name="testWhileIdle" value="true"/>
@@ -66,12 +63,23 @@
         <property name="minEvictableIdleTimeMillis" value="1800000"/>
         <property name="validationQuery" value="SELECT 1"/>
     </bean>
-    <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+
+    <bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+        <property name="transactionManagerName" value="java:jboss/TransactionManager" />
     </bean>
+    
     <tx:annotation-driven mode="aspectj" transaction-manager="transactionManager"/>
-    <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
-        <property name="persistenceUnitName" value="persistenceUnit"/>
+    <context:component-scan base-package="com.beauty.domain">
+        <context:exclude-filter expression=".*_Roo_.*" type="regex"/>
+        <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+    </context:component-scan>
+    
+    <bean lazy-init="true" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
+        <property name="persistenceUnitName" value="primary"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    
+    <bean id="entityManager" class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
+       <property name="entityManagerFactory" ref="entityManagerFactory"/>
+  </bean>
 </beans>

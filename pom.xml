@@ -16,6 +16,7 @@
     <tomcat.version>7.0.63</tomcat.version>
     <spring-security.version>3.2.5.RELEASE</spring-security.version>
     </properties>
+    
     <repositories>
         <repository>
             <id>spring-maven-release</id>
@@ -254,6 +255,16 @@
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
             <version>1.2</version>
+            <exclusions>
+		        <exclusion>
+		            <artifactId>servlet-api</artifactId>
+		            <groupId>javax.servlet</groupId>
+		        </exclusion>
+		        <exclusion>
+		            <artifactId>jsp-api</artifactId>
+		            <groupId>javax.servlet.jsp</groupId>
+		        </exclusion>
+		    </exclusions>
         </dependency>
         <dependency>
             <groupId>org.glassfish.web</groupId>
@@ -320,6 +331,26 @@
             <version>${spring-security.version}</version>
         </dependency>
     </dependencies>
+    
+    <profiles>
+	    <profile>
+	        <id>openshift</id>
+	        <build>
+	            <finalName>nsk</finalName>
+	            <plugins>
+	                <plugin>
+	                    <artifactId>maven-war-plugin</artifactId>
+	                    <version>2.1.1</version>
+	                    <configuration>
+	                       <outputDirectory>deployments</outputDirectory>
+	                       <warName>ROOT</warName>
+	                    </configuration>
+	                </plugin>
+	            </plugins>
+	        </build>
+	    </profile>
+	</profiles>
+    
     <build>
         <plugins>
             <plugin>
