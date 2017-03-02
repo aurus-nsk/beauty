@@ -18,12 +18,13 @@
       </p>
     </c:if>
     <spring:url value="/resources/j_spring_security_check" var="form_url" />
+    
     <form name="f" action="${fn:escapeXml(form_url)}" method="POST">
-      <div>
+      <div class="form-group">
         <label for="j_username">
           <spring:message code="security_login_form_name" />
         </label>
-        <input id="j_username" type='text' name='j_username' style="width:150px" />
+        <input id="j_username" type='text' name='j_username' />
         <spring:message code="security_login_form_name_message" var="name_msg" htmlEscape="false" />
         <script type="text/javascript">
           <c:set var="sec_name_msg">
@@ -32,12 +33,13 @@
           Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_username", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${sec_name_msg}", required : true}})); 
         </script>
       </div>
+      
       <br />
-      <div>
+      <div class="form-group">
         <label for="j_password">
           <spring:message code="security_login_form_password" />
         </label>
-        <input id="j_password" type='password' name='j_password' style="width:150px" />
+        <input id="j_password" type='password' name='j_password' />
         <spring:message code="security_login_form_password_message" var="pwd_msg" htmlEscape="false" />
         <script type="text/javascript">
           <c:set var="sec_pwd_msg">
@@ -50,7 +52,7 @@
       <div class="submit">
         <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
         <spring:message code="button_submit" var="submit_label" htmlEscape="false" />
-        <input id="proceed" type="submit" value="${fn:escapeXml(submit_label)}" />
+        <input id="proceed" type="submit" class="btn btn-primary" value="${fn:escapeXml(submit_label)}" />
         <spring:message code="button_reset" var="reset_label" htmlEscape="false" />
         <input id="reset" type="reset" value="${fn:escapeXml(reset_label)}" />
       </div>
