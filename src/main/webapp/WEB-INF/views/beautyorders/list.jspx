@@ -8,8 +8,8 @@
             <table:column id="c_com_beauty_domain_BeautyOrder_productName" property="productName" z="aFbORdJRdTAcugdIBvSlsj1n/QE="/>
             <table:column id="c_com_beauty_domain_BeautyOrder_colour" property="colour" z="znhzK5VzD4HTYSEON/0N8/EJWdA="/>
             <table:column id="c_com_beauty_domain_BeautyOrder_sizeName" property="sizeName" z="ppXxP6F/m/NmEoN8MasT7Nmqx3s="/>
-            <table:column id="c_com_beauty_domain_BeautyOrder_quantity" property="quantity" z="gGoiOSYTc9Yg7ACL/2SCtEq/8Hk="/>
             <table:column id="c_com_beauty_domain_BeautyOrder_person" property="person" z="BT88DvF3EgX+crT49xAkInJLAvk="/>
+            <table:column date="true" dateTimePattern="${beautyOrder_datecreate_date_format}" id="c_com_beauty_domain_BeautyOrder_dateCreate" property="dateCreate" z="frz2/pxfjdtnjEHWmmR8zqkkUgo="/>
         </table:table>
     </page:list>
 </div>

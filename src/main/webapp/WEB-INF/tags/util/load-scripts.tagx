@@ -14,6 +14,7 @@
   <spring:url value="/resources/bower_components/jquery/dist/jquery.js" var="jquery_js" />
   <spring:url value="/resources/bower_components/bootstrap/dist/js/bootstrap.js" var="bootstrap_js" />
   <spring:url value="/resources/js/beauty.js" var="beauty_js" />
+  <spring:url value="/resources/styles/beauty.css" var="beauty_css" />
   
   <!-- 
   <link rel="stylesheet" type="text/css" href="${tundra_url}" />
@@ -22,6 +23,7 @@
    -->
    
 	<link rel="stylesheet" type="text/css" href="${bootstrap_css}" />
+	<link rel="stylesheet" type="text/css" href="${beauty_css}" />
 
   <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
   <c:set var="userLocale">

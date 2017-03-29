@@ -26,6 +26,14 @@ privileged aspect BeautyOrder_Roo_JavaBean {
         this.shopName = shopName;
     }
     
+    public Date BeautyOrder.getDateCreate() {
+        return this.dateCreate;
+    }
+    
+    public void BeautyOrder.setDateCreate(Date dateCreate) {
+        this.dateCreate = dateCreate;
+    }
+    
     public String BeautyOrder.getProductName() {
         return this.productName;
     }
@@ -50,28 +58,20 @@ privileged aspect BeautyOrder_Roo_JavaBean {
         this.sizeName = sizeName;
     }
     
-    public String BeautyOrder.getQuantity() {
-        return this.quantity;
+    public BigDecimal BeautyOrder.getPriceOriginDollars() {
+        return this.priceOriginDollars;
     }
     
-    public void BeautyOrder.setQuantity(String quantity) {
-        this.quantity = quantity;
+    public void BeautyOrder.setPriceOriginDollars(BigDecimal priceOriginDollars) {
+        this.priceOriginDollars = priceOriginDollars;
     }
     
-    public BigDecimal BeautyOrder.getPriceOrigin() {
-        return this.priceOrigin;
+    public BigDecimal BeautyOrder.getPriceOrgSaleDollars() {
+        return this.priceOrgSaleDollars;
     }
     
-    public void BeautyOrder.setPriceOrigin(BigDecimal priceOrigin) {
-        this.priceOrigin = priceOrigin;
-    }
-    
-    public BigDecimal BeautyOrder.getPriceSaleOrg() {
-        return this.priceSaleOrg;
-    }
-    
-    public void BeautyOrder.setPriceSaleOrg(BigDecimal priceSaleOrg) {
-        this.priceSaleOrg = priceSaleOrg;
+    public void BeautyOrder.setPriceOrgSaleDollars(BigDecimal priceOrgSaleDollars) {
+        this.priceOrgSaleDollars = priceOrgSaleDollars;
     }
     
     public BigDecimal BeautyOrder.getTaxDollars() {
@@ -82,12 +82,12 @@ privileged aspect BeautyOrder_Roo_JavaBean {
         this.taxDollars = taxDollars;
     }
     
-    public BigDecimal BeautyOrder.getDeliveryUSA() {
-        return this.deliveryUSA;
+    public BigDecimal BeautyOrder.getDeliveryUsaDollars() {
+        return this.deliveryUsaDollars;
     }
     
-    public void BeautyOrder.setDeliveryUSA(BigDecimal deliveryUSA) {
-        this.deliveryUSA = deliveryUSA;
+    public void BeautyOrder.setDeliveryUsaDollars(BigDecimal deliveryUsaDollars) {
+        this.deliveryUsaDollars = deliveryUsaDollars;
     }
     
     public BigDecimal BeautyOrder.getTotalDollars() {
@@ -96,6 +96,14 @@ privileged aspect BeautyOrder_Roo_JavaBean {
     
     public void BeautyOrder.setTotalDollars(BigDecimal totalDollars) {
         this.totalDollars = totalDollars;
+    }
+    
+    public BigDecimal BeautyOrder.getCurrency() {
+        return this.currency;
+    }
+    
+    public void BeautyOrder.setCurrency(BigDecimal currency) {
+        this.currency = currency;
     }
     
     public BigDecimal BeautyOrder.getTotalRubles() {
@@ -114,28 +122,20 @@ privileged aspect BeautyOrder_Roo_JavaBean {
         this.weight = weight;
     }
     
+    public BigDecimal BeautyOrder.getPriceOfKgDollars() {
+        return this.priceOfKgDollars;
+    }
+    
+    public void BeautyOrder.setPriceOfKgDollars(BigDecimal priceOfKgDollars) {
+        this.priceOfKgDollars = priceOfKgDollars;
+    }
+    
     public BigDecimal BeautyOrder.getDeliveryRussiaDollars() {
         return this.deliveryRussiaDollars;
     }
     
     public void BeautyOrder.setDeliveryRussiaDollars(BigDecimal deliveryRussiaDollars) {
         this.deliveryRussiaDollars = deliveryRussiaDollars;
-    }
-    
-    public BigDecimal BeautyOrder.getDeliveryRussiaRubles() {
-        return this.deliveryRussiaRubles;
-    }
-    
-    public void BeautyOrder.setDeliveryRussiaRubles(BigDecimal deliveryRussiaRubles) {
-        this.deliveryRussiaRubles = deliveryRussiaRubles;
-    }
-    
-    public BigDecimal BeautyOrder.getCurrency() {
-        return this.currency;
-    }
-    
-    public void BeautyOrder.setCurrency(BigDecimal currency) {
-        this.currency = currency;
     }
     
     public BigDecimal BeautyOrder.getCurrencyDelivery() {
@@ -146,12 +146,12 @@ privileged aspect BeautyOrder_Roo_JavaBean {
         this.currencyDelivery = currencyDelivery;
     }
     
-    public BigDecimal BeautyOrder.getTotalSumDollars() {
-        return this.totalSumDollars;
+    public BigDecimal BeautyOrder.getDeliveryRussiaRubles() {
+        return this.deliveryRussiaRubles;
     }
     
-    public void BeautyOrder.setTotalSumDollars(BigDecimal totalSumDollars) {
-        this.totalSumDollars = totalSumDollars;
+    public void BeautyOrder.setDeliveryRussiaRubles(BigDecimal deliveryRussiaRubles) {
+        this.deliveryRussiaRubles = deliveryRussiaRubles;
     }
     
     public BigDecimal BeautyOrder.getTotalSumRubles() {
@@ -160,22 +160,6 @@ privileged aspect BeautyOrder_Roo_JavaBean {
     
     public void BeautyOrder.setTotalSumRubles(BigDecimal totalSumRubles) {
         this.totalSumRubles = totalSumRubles;
-    }
-    
-    public BigDecimal BeautyOrder.getPriceOfKg() {
-        return this.priceOfKg;
-    }
-    
-    public void BeautyOrder.setPriceOfKg(BigDecimal priceOfKg) {
-        this.priceOfKg = priceOfKg;
-    }
-    
-    public Date BeautyOrder.getDateCreate() {
-        return this.dateCreate;
-    }
-    
-    public void BeautyOrder.setDateCreate(Date dateCreate) {
-        this.dateCreate = dateCreate;
     }
     
 }

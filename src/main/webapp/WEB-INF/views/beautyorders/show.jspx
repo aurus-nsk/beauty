@@ -7,22 +7,20 @@
         <field:display field="productName" id="s_com_beauty_domain_BeautyOrder_productName" object="${beautyorder}" z="PbDxD/N90F6kzrKgymKipOOEQj4="/>
         <field:display field="colour" id="s_com_beauty_domain_BeautyOrder_colour" object="${beautyorder}" z="Qj9uKvu9t8Z8ygL2GSAfYQIZ/Uc="/>
         <field:display field="sizeName" id="s_com_beauty_domain_BeautyOrder_sizeName" object="${beautyorder}" z="Md3fO6BPA1xI4x1LLSVhN05BcgI="/>
-        <field:display field="quantity" id="s_com_beauty_domain_BeautyOrder_quantity" object="${beautyorder}" z="cfEmxM1S96FspnICEN9JVuAVvp0="/>
-        <field:display field="priceOrigin" id="s_com_beauty_domain_BeautyOrder_priceOrigin" object="${beautyorder}" z="lnMkCVkjNkjrBv7s/4/FW7VQgZk="/>
-        <field:display field="priceSaleOrg" id="s_com_beauty_domain_BeautyOrder_priceSaleOrg" object="${beautyorder}" z="9Rwv2cmF3+miLzUiR4n4hyvFjz8="/>
         <field:display field="taxDollars" id="s_com_beauty_domain_BeautyOrder_taxDollars" object="${beautyorder}" z="K2EuEypeaoH94gtnBIr5r05KhtU="/>
-        <field:display field="deliveryUSA" id="s_com_beauty_domain_BeautyOrder_deliveryUSA" object="${beautyorder}" z="+58lv5zXuIUb6NiHgYznWNg1TBQ="/>
         <field:display field="totalDollars" id="s_com_beauty_domain_BeautyOrder_totalDollars" object="${beautyorder}" z="/5+H2Z7AifYwXiwIa5fPYDmmCbQ="/>
         <field:display field="totalRubles" id="s_com_beauty_domain_BeautyOrder_totalRubles" object="${beautyorder}" z="XvWwuZuXg/dQWZTNXWAfK/ezKMo="/>
         <field:display field="weight" id="s_com_beauty_domain_BeautyOrder_weight" object="${beautyorder}" z="Wa9zIjwkdk6rn2f81jZR+mDXGL8="/>
         <field:display field="deliveryRussiaDollars" id="s_com_beauty_domain_BeautyOrder_deliveryRussiaDollars" object="${beautyorder}" z="Z1M6p5Lo9wwAAAK4we5eo6/cG2E="/>
         <field:display field="deliveryRussiaRubles" id="s_com_beauty_domain_BeautyOrder_deliveryRussiaRubles" object="${beautyorder}" z="nlOJv5x+UyDmMdedQuBIkpLmiYM="/>
         <field:display field="currency" id="s_com_beauty_domain_BeautyOrder_currency" object="${beautyorder}" z="88spyrtznn8aOlPsLTT9ikwVIIU="/>
-        <field:display field="totalSumDollars" id="s_com_beauty_domain_BeautyOrder_totalSumDollars" object="${beautyorder}" z="mlfycjJ1sgTOM+zKx7blu2dAdNc="/>
         <field:display field="totalSumRubles" id="s_com_beauty_domain_BeautyOrder_totalSumRubles" object="${beautyorder}" z="GPXEiOT3nsoweT13XyKG9igkFdk="/>
         <field:display field="person" id="s_com_beauty_domain_BeautyOrder_person" object="${beautyorder}" z="yj9tLpsgmYbn87BHwMV7Iu4VvYc="/>
         <field:display field="currencyDelivery" id="s_com_beauty_domain_BeautyOrder_currencyDelivery" object="${beautyorder}" z="BmZoF5hVIRaJZ0vCJoJorJMVrrU="/>
-        <field:display field="priceOfKg" id="s_com_beauty_domain_BeautyOrder_priceOfKg" object="${beautyorder}" z="BhtG/Y3je8r8GDUbl9aykdeeeCs="/>
         <field:display date="true" dateTimePattern="${beautyOrder_datecreate_date_format}" field="dateCreate" id="s_com_beauty_domain_BeautyOrder_dateCreate" object="${beautyorder}" z="GRqFmTg/Pi1Bkkv2/+QWGTOjUgQ="/>
+        <field:display field="priceOriginDollars" id="s_com_beauty_domain_BeautyOrder_priceOriginDollars" object="${beautyorder}" z="J4eoOUoKOt3pGWATADKXrCymHoM="/>
+        <field:display field="priceOrgSaleDollars" id="s_com_beauty_domain_BeautyOrder_priceOrgSaleDollars" object="${beautyorder}" z="oQWEUMToTt2J7SaZTzqz8J6ZsE8="/>
+        <field:display field="deliveryUsaDollars" id="s_com_beauty_domain_BeautyOrder_deliveryUsaDollars" object="${beautyorder}" z="juXhPdl+xwv20CzMBFeuLPt82jU="/>
+        <field:display field="priceOfKgDollars" id="s_com_beauty_domain_BeautyOrder_priceOfKgDollars" object="${beautyorder}" z="rRH3IYYAiDrHXZn8op/v2v4r/ZM="/>
     </page:show>
 </div>

@@ -2,8 +2,8 @@ package com.beauty.domain;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -14,114 +14,64 @@ import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
 
-@Entity
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
+@Table(name = "BeautyOrder")
 public class BeautyOrder {
 
-    /**
-     */
     @OneToOne
     private Person person;
 
-    /**
-     */
     private String shopName;
 
-    /**
-     */
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Date dateCreate;
+    
     @NotNull
     @Size(min = 2)
     private String productName;
 
-    /**
-     */
     private String colour;
 
-    /**
-     */
     private String sizeName;
 
-    /**
-     */
     @NotNull
-    private String quantity;
+    private BigDecimal priceOriginDollars;
 
-    /**
-     */
     @NotNull
-    private BigDecimal priceOrigin;
+    private BigDecimal priceOrgSaleDollars;
 
-    /**
-     */
-    @NotNull
-    private BigDecimal priceSaleOrg;
-
-    /**
-     */
     @NotNull
     private BigDecimal taxDollars;
 
-    /**
-     */
-    private BigDecimal deliveryUSA;
+    private BigDecimal deliveryUsaDollars;
 
-    /**
-     */
     @NotNull
     private BigDecimal totalDollars;
-
-    /**
-     */
-    @NotNull
-    private BigDecimal totalRubles;
-
-    /**
-     */
-    @NotNull
-    private Integer weight;
-
-    /**
-     */
-    @NotNull
-    private BigDecimal deliveryRussiaDollars;
-
-    /**
-     */
-    @NotNull
-    private BigDecimal deliveryRussiaRubles;
-
-    /**
-     * currencyPurchase
-     */
+    
     @NotNull
     private BigDecimal currency;
 
-    /**
-     * currencyDelivery
-     */
+    @NotNull
+    private BigDecimal totalRubles;
+
+    @NotNull
+    private Integer weight;
+    
+    @NotNull
+    private BigDecimal priceOfKgDollars;
+
+    @NotNull
+    private BigDecimal deliveryRussiaDollars;
+
     @NotNull
     private BigDecimal currencyDelivery;
-
-    /**
-     */
+    
     @NotNull
-    private BigDecimal totalSumDollars;
+    private BigDecimal deliveryRussiaRubles;
 
-    /**
-     */
     @NotNull
     private BigDecimal totalSumRubles;
-
-    /**
-     */
-    @NotNull
-    private BigDecimal priceOfKg;
-
-    /**
-     */
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date dateCreate;
 }

@@ -9,11 +9,38 @@ import javax.persistence.TypedQuery;
 
 privileged aspect Person_Roo_Finder {
     
+    public static Long Person.countFindPeopleByUsernameAndPasswordEquals(String username, String password) {
+        if (username == null || username.length() == 0) throw new IllegalArgumentException("The username argument is required");
+        if (password == null || password.length() == 0) throw new IllegalArgumentException("The password argument is required");
+        EntityManager em = Person.entityManager();
+        TypedQuery q = em.createQuery("SELECT COUNT(o) FROM Person AS o WHERE o.username = :username AND o.password = :password", Long.class);
+        q.setParameter("username", username);
+        q.setParameter("password", password);
+        return ((Long) q.getSingleResult());
+    }
+    
     public static TypedQuery<Person> Person.findPeopleByUsernameAndPasswordEquals(String username, String password) {
         if (username == null || username.length() == 0) throw new IllegalArgumentException("The username argument is required");
         if (password == null || password.length() == 0) throw new IllegalArgumentException("The password argument is required");
         EntityManager em = Person.entityManager();
         TypedQuery<Person> q = em.createQuery("SELECT o FROM Person AS o WHERE o.username = :username AND o.password = :password", Person.class);
+        q.setParameter("username", username);
+        q.setParameter("password", password);
+        return q;
+    }
+    
+    public static TypedQuery<Person> Person.findPeopleByUsernameAndPasswordEquals(String username, String password, String sortFieldName, String sortOrder) {
+        if (username == null || username.length() == 0) throw new IllegalArgumentException("The username argument is required");
+        if (password == null || password.length() == 0) throw new IllegalArgumentException("The password argument is required");
+        EntityManager em = Person.entityManager();
+        StringBuilder queryBuilder = new StringBuilder("SELECT o FROM Person AS o WHERE o.username = :username AND o.password = :password");
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            queryBuilder.append(" ORDER BY ").append(sortFieldName);
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                queryBuilder.append(" ").append(sortOrder);
+            }
+        }
+        TypedQuery<Person> q = em.createQuery(queryBuilder.toString(), Person.class);
         q.setParameter("username", username);
         q.setParameter("password", password);
         return q;

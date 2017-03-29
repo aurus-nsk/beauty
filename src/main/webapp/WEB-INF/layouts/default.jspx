@@ -18,9 +18,9 @@
 	 
 	<body>
 		<tiles:insertAttribute name="header" ignore="true" />
-		<hr>
+		<hr></hr>
 		<tiles:insertAttribute name="body" />
-		<hr>
+		<hr></hr>
 		<tiles:insertAttribute name="footer" ignore="true" />
 	</body>
 	
