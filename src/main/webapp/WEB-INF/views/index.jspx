@@ -1,14 +1,105 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" 
+xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
-  <spring:message var="app_name" code="application_name" htmlEscape="false" />
-  <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
-  <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
-  </util:panel>
+  
+   <div class="container-fluid">
+	
+		<table border="1">
+			<tr>
+				<td>УЗ</td>
+				<td>Магазин</td>
+				<td>Дата</td>
+				<td>Наименование</td>
+				<td>Цвет</td>
+				<td>Размер</td>
+				<td>Цена сайта, $</td>
+				<td>Цена со скидкой и ОРГ%, $</td>
+				<td>Налог, дол</td>
+				<td>Доставка по США, дол</td>
+				<td>Итого, дол</td>
+				<td>Курс, дол.</td>
+				<td>Цена в руб.</td>
+				<td>Вес, кг</td>
+				<td>Дол/1 кг веса</td>
+				<td>Доставка РФ, дол</td>
+				<td>Курс доставки</td>
+				<td>Доставка РФ, руб.</td>
+				<td>Оплата</td>
+				<td>Статус</td>
+			</tr>
+			<tr>
+				<td style="width: 55px;"> 
+					<select class="form-control inputfield">
+						<option>Olga</option>
+						<option>George</option>
+						<option>Valentina</option>
+						<option>Hamilton</option>
+					</select>
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+				<td>    
+					<input type="text" class="form-control inputfield">
+				</td>
+			</tr>
+		</table>
+		<div class="text-right">
+			<button type="button" class="btn btn-outline-primary">Добавить</button>
+		</div>
+	</div>
+   
+   
 </div>
